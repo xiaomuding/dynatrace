@@ -6,17 +6,18 @@ import sys
 from config import *
 from method import *
 
-'''
+
 Cookie = sys.argv[1]
 CSRFToken = sys.argv[2]
 start_time = sys.argv[3]
 end_time = sys.argv[4]
+
 '''
 Cookie = 'apmroute=16c592421f5c83592e9e61dcdecf94db; apmsessionid=node010b7qgnhxnd8uy1xa4h8c1hpi849340.node0'
 CSRFToken = '2507c641-1f6e-499b-ace9-f08aa04f13df|17|c1a7b26a-a2ca-11e7-9c34-02a366d33462'
 start_time = '1596098929359'
 end_time = '1596106769321'
-
+'''
 #add header
 headers = {
 'Cookie': Cookie,
