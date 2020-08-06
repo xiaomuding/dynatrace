@@ -124,6 +124,43 @@ def getBizxGC(json):
         sum = sum + list
     avg = sum / len(value_list)
     return avg
+def getBizxTomcatThreads(json):
+    state = json['customChartingList']['items']['PROCESS_GROUP_INSTANCE']
+    # print(state)
+    # print(state.keys())
+    value_list = []
+    for host in state:
+        # print(host['name'])
+        value = host['customChartingTimeseriesColumnValues']['data'][
+            'builtin:tech.tomcat.tomcat.currentThreadsBusy|AVG|TOTAL|LINE|PROCESS_GROUP_INSTANCE']
+        # print(value/1024/1024/1024)
+        value_list.append(value)
+    sum = 0
+    for list in value_list:
+        sum = sum + list
+    avg = sum / len(value_list)
+    return avg
+def getOemTomcatThreads(json):
+    state = json['customChartingList']['items']['PROCESS_GROUP_INSTANCE']
+    # print(state)
+    # print(state.keys())
+    value_list = []
+    for host in state:
+        # print(host['name'])
+        value = host['customChartingTimeseriesColumnValues']['data'][
+            'builtin:tech.tomcat.tomcat.currentThreadsBusy|AVG|TOTAL|LINE|PROCESS_GROUP_INSTANCE']
+        # print(value/1024/1024/1024)
+        value_list.append(value)
+
+    sum = 0
+    for list in value_list:
+        sum = sum + list
+    avg = sum / len(value_list)
+    return avg
+
+
+
+
 
 
 
